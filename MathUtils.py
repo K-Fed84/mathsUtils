@@ -1,16 +1,42 @@
 # MathUtils - A program that can factorial or square a given value
-class Cal:
-    def __init__(self, a):
-        self.a = a
 
-    def factor(self):
-        return self.a+self.a
 
-    def square(self):
-        return self.a*self.a
+class Calculator:
 
-    a = int(input("Enter number: "))
-    obj = Cal(a)
+    num = int(input("Enter a number: "))
+
+    # def __init__(self):
+
+    # def factorial(num):
+    #     f = 1
+    #     for n in range(2, num + 1):
+    #         f = f * n
+    #         print(num, ' factorial is ', f)
+    #     return f
+
+
+
+
+        # if num < 0:
+        #     print("Sorry, factorial does not exist for negative numbers")
+        # elif num == 0:
+        #     print("The factorial of 0 is 1")
+        # else:
+        #     for i in range(1, num + 1):
+        #         factorial = factorial * i
+        #     print("The factorial of", num, "is", factorial)
+
+
+
+
+
+    def square(num):
+        squared = num ** 2
+        return squared
+
+    print(square(num))
+
+
 
 
 # print ("Math Utils program")
