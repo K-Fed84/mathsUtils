@@ -1,39 +1,29 @@
 # MathUtils - A program that can factorial or square a given value
 
-# def factorial(x):
-#    n = 1
-#    while x > 1:
-#        n *= x
-#        x -= 1
-#    return n
-#
-# print (factorial(3))
-
-
-
 
 class Calculator:
 
+    global num, calc
     num = int(input("Enter a number: "))
+    calc = (input("Enter 'factorial' or 'square':"))
 
-    def factorial(num):
+
+if calc == 'factorial':
+    def factorial_calc(num):
         n = 1
         while num > 1:
             n *= num
             num -= 1
         return n
 
-    print(factorial(num))
+    print(factorial_calc(num))
 
+elif calc == 'square':
+    def square_calc(num):
+        squared = num ** 2
+        return squared
 
-
-
-    # def square(num):
-    #     squared = num ** 2
-    #     return squared
-    #
-    # print(square(num))
-
+    print(square_calc(num))
 
 
 
