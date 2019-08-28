@@ -4,7 +4,10 @@
 class Calculator:
 
     global num, calc
-    num = int(input("Enter a number: "))
+    try:
+        num = int(input("Enter a number: "))
+    except ValueError:
+        print("Invalid input")
     calc = (input("Enter 'factorial' or 'square':"))
 
 
@@ -25,9 +28,5 @@ elif calc == 'square':
 
     print(square_calc(num))
 
-
-
-# print ("Math Utils program")
-# print ("Select Operation:")
-# print ("1. Factorial")
-# print ("2. Square")
+else:
+    print("Invalid operator")
