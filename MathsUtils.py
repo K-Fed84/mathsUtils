@@ -1,15 +1,20 @@
 # MathUtils - A program that can factorial or square a given value
+import argparse
 
 
-class Calculator:
+def main():
 
-    global num, calc
-    try:
-        num = int(input("Enter a number: "))
-    except ValueError:
-        print("Invalid input")
-    calc = (input("Enter 'factorial' or 'square':"))
+    # Setup argument parser
+    parser = argparse.ArgumentParser(description='mathsUtils can factorial or square a given number')
+    parser.add_argument('--type', dest='operator', required=True, type=str, choices=['factorial', 'square'],
+                        help='Enter factorial or square')
+    parser.add_argument('--number', dest='integer', required=True, type=int,
+                        help='Enter a positive integer')
 
+    # Process arguments
+    args = parser.parse_args()
+    calc = args.operator
+    num = args.integer
 
 if calc == 'factorial':
     def factorial_calc(num):
@@ -28,5 +33,12 @@ elif calc == 'square':
 
     print(square_calc(num))
 
-else:
-    print("Invalid operator")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except (KeyboardInterrupt, SystemExit):
+        print("exiting")
+
+
