@@ -16,7 +16,7 @@ def main():
     calc = args.operator
     num = args.integer
 
-if calc == 'factorial':
+    # Factorial and square methods
     def factorial_calc(num):
         n = 1
         while num > 1:
@@ -24,15 +24,15 @@ if calc == 'factorial':
             num -= 1
         return n
 
-    print(factorial_calc(num))
-
-elif calc == 'square':
     def square_calc(num):
         squared = num ** 2
         return squared
 
-    print(square_calc(num))
-
+    # Deciding operation
+    if calc == 'factorial':
+        print(factorial_calc(num))
+    elif calc == 'square':
+        print(square_calc(num))
 
 
 if __name__ == "__main__":
@@ -40,5 +40,3 @@ if __name__ == "__main__":
         main()
     except (KeyboardInterrupt, SystemExit):
         print("exiting")
-
-
