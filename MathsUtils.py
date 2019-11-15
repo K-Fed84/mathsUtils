@@ -1,7 +1,6 @@
 # MathUtils - A program that can factorial or square a given value
 import argparse
 
-
 def main():
 
     # Setup argument parser
