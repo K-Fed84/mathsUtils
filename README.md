@@ -13,3 +13,5 @@ docker build -t python-calc .
 docker run python-calc --type '' --number
 
 e.g. docker run python-calc --type 'square' --number 4
+
+For help: docker run python-calc --help
